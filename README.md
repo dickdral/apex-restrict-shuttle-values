@@ -12,12 +12,14 @@ and case insensitive:
 The plugin can be used with Apex 5.0 and Apex 5.1.
 
 ## Install
-- Import plugin file "dynamic_action_plugin_nl_detora_apex_resize_dialog.sql" from source directory into your application
+- Import plugin file "dynamic_action_plugin_nl_detora_apex_restrict_shuttle_values.sql" from source directory into your application
 - You can use the plug-in to restrict the value list of Apex shuttle items
 
 ## Plugin Settings
 You can use the plug-in as Action Step in a Dynamic Action.
-To use the plug-in the Affected element needs to point to the shuttle item.
+To use the plug-in:
+- the attribute Search Item needs to reference the item containing the filter content
+- the Affected element needs to point to the shuttle item
 
 ## Demo Application
 http://www.speech2form.com/ords/f?p=OPFG:RESTRICT_SHUTTLE
