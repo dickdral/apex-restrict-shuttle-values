@@ -6,6 +6,16 @@
 // global namespace
 var apex_restrict_shuttle_values = {
 
+toggleOption: function( option, show ) {
+    jQuery( option ).toggle( show );
+    if( show ) {
+        if( jQuery( option ).parent( 'span.toggleOption' ).length )
+            jQuery( option ).unwrap( );
+    } else {
+        if( jQuery( option ).parent( 'span.toggleOption' ).length == 0 )
+            jQuery( option ).wrap( '<span class="toggleOption" style="display: none;" />' );
+    }
+},
 restrict_values: function ( search_item, shuttle_item )
 {
   console.log('perform Restrict shuttle values');
@@ -34,9 +44,9 @@ restrict_values: function ( search_item, shuttle_item )
          }
 
          if ( visible ) 
-         {  $(this).show(); }
+         {  apex_restrict_shuttle_values.toggleOption(this,true); }
          else
-         {  $(this).hide(); 
+         {  apex_restrict_shuttle_values.toggleOption(this,false); 
             items_hidden = true;
          }
 
@@ -55,9 +65,14 @@ restrict_values: function ( search_item, shuttle_item )
     doIt: function() {
         // plugin attributes
         var daThis = this;
-        var search_item  = this.triggeringElement.id;
-        var shuttle_item = daThis.affectedElements[0].id;
-        console.log(search_item, shuttle_item);
+        var shuttle_item = daThis.affectedElements[0];
+        var search_item  = daThis.action.attribute01;
+        // Logging
+        var vLogging = true;
+        if (vLogging) {
+            console.log('Restrict Shuttle Values: search_item=' , search_item);
+            console.log('Restrict Shuttle Values: shuttle_item=', shuttle_item);
+        }
         apex_restrict_shuttle_values.restrict_values(search_item,shuttle_item);
     }
 };
