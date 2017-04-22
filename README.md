@@ -6,8 +6,9 @@ and case insensitive:
 
 ## Change history
 - V1.0    Initial version
-- V1.1    Support for Safari and IE added
-          Other items than search item can be triggering element
+- V1.1    
+-- Support for Safari and IE added
+-- Other items than search item can be triggering element
 
 ## Requirements
 The plugin can be used with Apex 5.0 and Apex 5.1.
