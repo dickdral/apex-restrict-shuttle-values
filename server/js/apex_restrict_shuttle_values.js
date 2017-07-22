@@ -65,7 +65,7 @@ restrict_values: function ( search_item, shuttle_item )
     doIt: function() {
         // plugin attributes
         var daThis = this;
-        var shuttle_item = daThis.affectedElements[0];
+        var shuttle_item = daThis.affectedElements[0].id;
         var search_item  = daThis.action.attribute01;
         // Logging
         var vLogging = true;

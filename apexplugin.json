@@ -1,6 +1,6 @@
 {
   "name" : "Restrict Apex Shuttle choices",
-  "version" : "v1.1",
+  "version" : "v1.2",
   "description" : "Restrict the Apex Shuttle choices without affecting the chosen values",
   "keywords" : ["shuttle","dynamic action"],
   "homepage" : "https://github.com/dickdral/apex-restrict-shuttle-values",
